@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --primary: rgb(255, 137, 26);
+  --secondary: rgb(128,128,128);
+  --dark: rgb(24, 23, 23);
+  --dark-1: rgb(41,41,41);
+  --light: rgb(238, 238, 238);
+  --success: rgb(38, 151, 43);
+  --danger: rgb(175, 43, 43);
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background: var(--dark);
+}
+
+.app {
+  height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* CLASS UTILITIES & OVERRIDES START */
+
+.header {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: var(--light);
+}
+
+.header--primary {
+  color: var(--primary);
+}
+
+.header--secondary {
+  color: var(--secondary);
+}
+
+.btn {
+  border: none;
+  padding: 1em 1.5em;
+  color: black;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 5px;
+  transition: 0.4s ease-out;
+  background: var(--light);
+}
+
+.btn:hover {
+  background: var(--primary);
+}
+
+/* CLASS UTILITIES & OVERRIDES START */
+
+/* MAIN SECTION START */
+
+.loader {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+
+.joke {
+  margin: 4rem 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.joke__setup {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+.joke__delivery {
+  color: var(--secondary);
+  margin-bottom: 5rem;
+}
+
+.dot-flashing-container {
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  animation: dotFlashing 1s infinite linear alternate;
+  margin: 0 0.1rem;
+}
+
+.dot--1 {
+  animation-delay: .5s;
+}
+
+.dot--2 {
+  animation-delay: 0s;
+}
+
+.dot--3 {
+  animation-delay: 1s;
+}
+
+/* MAIN SECTION END */
+
+
+/* TOGGLE CLASSES */
+
+.hide {
+  display: none;
+}
+
+/* ANIMATION STYLES */
+
+@keyframes dotFlashing {
+  0% {
+    background-color: var(--primary);
+  }
+  50%,
+  100% {
+    background-color: var(--secondary);
+  }
+}

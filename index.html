@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="design.css" />
+    <title>Programming Jokes 2021</title>
+  </head>
+  <body>
+
+    <div class="app">
+      <p class="header">Programming Jokes 2021 😂</p>
+      <main>
+        <div class="loader header header--primary" id="loader">
+          <p>Getting the Best Joke</p> 
+          <div class="dot-flashing-container">
+            <div class="dot dot--1"></div>
+            <div class="dot dot--2"></div>
+            <div class="dot dot--3"></div>
+          </div>
+        </div>
+        <div class="joke hide" id="joke">
+          <h2 class="joke__setup" id="joke-setup"></h2>
+          <h3 class="joke__delivery" id="joke-delivery"></h3> 
+          <button class="btn" id="next-btn">Next Joke</button>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
